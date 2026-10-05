@@ -6,7 +6,7 @@ services:
     ports:
       - "3306:3306"
     environments:
-      MYSQL_ROOT_PASSWORD: 'devopspassword'
+      MYSQL_ROOT_PASSWORD: devopspassword
     deploy:
       replicas: 1
     volumes:
