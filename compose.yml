@@ -5,7 +5,7 @@ services:
     image: appimage
     ports:
       - "3306:3306"
-    environments:
+    environment:
       MYSQL_ROOT_PASSWORD: devopspassword
     deploy:
       replicas: 1
