@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   devopsdb:
-    image: appimage
+    image: databaseimage
     ports:
       - "3306:3306"
     environment:
@@ -15,7 +15,7 @@ services:
       - mynetwork
 
   application:
-    image: databaseimage
+    image: appimage
     ports:
       - "1111:8080"
     deploy:
