@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   devopsdb:
-    image: databaseimage
+    image: dbimage:v1
     ports:
       - "3306:3306"
     environment:
@@ -15,7 +15,7 @@ services:
       - mynetwork
 
   application:
-    image: appimage
+    image: appimage:v1
     ports:
       - "1111:8080"
     deploy:
@@ -29,4 +29,4 @@ volumes:
   dbvolume:
 networks:
   mynetwork:
-    driver: bridge
+    driver: overlay
